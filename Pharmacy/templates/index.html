@@ -16,7 +16,7 @@
 <style>
 body{
   background-color: aquamarine;
-  height: 1000px;
+  height: 900px;
   margin: 0;
   padding: 0;
 }
@@ -247,39 +247,135 @@ padding: 0;
   }
 
 
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+    
+
+li,a,button{
+    font-family: "Monsterrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: black; 
+    text-decoration: none;
+    padding: 15px 10px;
+}
+
+
+header{
+    display: flex;
+    justify-content: flex-between;
+    align-items: center;
+    padding: 5px 10%;
+    height: 100px;
+    background-color:white;
+}
+
+.logo{
+    cursor:pointer;
+    height: 150px;
+    width:150px;
+    margin-right: auto;
+    float: left;
+}
+
+
+.nav_links{
+    list-style: none;
+    margin-top:10px ;
+    padding-left: 20px;
+}    
+.nav_links li{
+    display: inline-block;
+    padding: 20px 30px;
+    justify-content: right;
+    margin-left: auto;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #0088a9;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor:pointer;
+    transition: all 0.3s ease 0s;
+
+}
+
+.d-flex{
+    float: right;
+    margin-top: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}
+
+.creator{ 
+    background-color: #41EED4;
+}
+
+.social{
+  height:200px;
+}
+
 </style>
 <body>
-      <div id="navbar">
-            <h4><span>PHARMA</span></h4>
-                <a  class="nav_option" href=""><span>Home</span></a>
-                      <a class="nav_option" href="about/"><span>About</span></a>
-                      <a class="nav_option" href="med_prod/"><span>Our Medicine & Product</span></a>
-                      <a class="nav_option" href="order/"><span>Order</span></a>
-                      <a class="nav_option" href="contact"><span>Contact Us</span></a>
-                  <div class="dropdown">
-                      <button class="dropbtn">New User?</button>
-                        <div class="dropdown-content">
-                            <a href="login/">Login</a>
-                                <a href="Register/">Sign in</a>
-                                    </div>
-                  </div>
-                  <a class="nav_option" href="My_cart/"><span>My Cart</span></a>
-              
-                      <form class="search" action="#">
-                          <input class="search_place" type="text"
-                            placeholder=" Search medicine"
-                              name="search">
-                        <button>Search
-                            <i class="fa fa-search"
-                              style="font-size: 15px;">
-                            </i>
-                        </button>
-                      </form>
+<!--Navbar-->
+<header>
+  {% load static %}
+  <img src="{% static "Pharmacy.png" %}" style="   cursor:pointer;
+  height: 100px;
+  width:100px;
+  margin-right: auto;
+  float: left;" alt="MY Image 1">
+        <!--<h5 class="logo-na"><italic>Chatbot Assistant<italic></h5>-->
+   
+          <nav>
+            <ul class="nav_links option">
+              <a  href=""><span>Home</span></a>
+              <a  href="about/"><span>About</span></a>
+              <a href="med_prod/"><span>Our Medicine & Product</span></a>
+              <a  href="order/"><span>Order</span></a>
+              <a  href="contact"><span>Contact Us</span></a>
 
-                      <nav class="helpline-nav">
-                        <li class="helpline"><a href="tel:+917583962253">Helpline: +91 7583962253</a></li>
-                    </nav>
-    </div>
+              <div class="dropdown">
+                <button class="dropbtn">New User?</button>
+                  <div class="dropdown-content">
+                      <a href="login/">Login</a>
+                          <a href="Register/">Sign in</a>
+                              </div>
+            </ul>
+
+          
+            
+        </nav>
+
+
+
+        <form class="d-flex" role="search">
+          <input class="search" type="search" placeholder="Search" aria-label="Search">
+          <button class="search_btn" type="submit">Search</button>
+        </form>
+        
+           
+</header>
+<marquee class="creator" >In most people, the left lung is 10% smaller than the right&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The human brain operates on 12 to 25 watts of power        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Human noses can remember 50,000 different scents           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our brains don't feel pain                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The tongue is the strongest muscle in the entire body.     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                        </marquee>
+
+<!--Navbar-->
+
     
 
         
@@ -292,14 +388,14 @@ padding: 0;
       <div class="mySlides fade">
           <div class="numbertext">1 / 3</div>
           {% load static %}
-              <img src="{% static "Pharmacy.png" %}" style="width:100%" alt="MY Image 1">
+              <img src="{% static "Pharmacy.png" %}" style="height:500px; width:100%" alt="MY Image 1">
           <div class="text"><h4>Pharma is one of India's most trusted online pharmacy & medical stores offering pharmaceutical and healthcare products at a FLAT 20% OFF*.Trusted by Thousands of Customers - Show that the company has a strong reputation and has earned the trust of thousands of satisfied customers</h4></div>
       </div>
     
       <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
             {% load static %}
-            <img src="{% static "img3.jpg" %}" style="width:100%" alt="My Image 2">
+            <img src="{% static "img3.jpg" %}" style="height:500px; width:100%" alt="My Image 2">
               <div class="text"><h4>Medicine is the science and practice of caring for a patient, managing the diagnosis, prognosis, prevention, treatment, palliation of their injury or disease, and promoting their health</h4></div>
       </div>
     
@@ -307,7 +403,7 @@ padding: 0;
       <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
             {% load static %}
-            <img src="{% static "img4.jpg" %}" style="width:100%" alt="My Image 3">
+            <img src="{% static "img4.jpg" %}" style="height:500px; width:100%" alt="My Image 3">
               <div class="text"><h4> Here You Get Soap,Medicated Shampoo,Sanitizer,Mask</h4></div>
       </div>
     
@@ -321,7 +417,6 @@ padding: 0;
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
     </div>
     <script>
     let slideIndex = 0;
@@ -336,7 +431,7 @@ padding: 0;
           slideIndex++;
         if (slideIndex > slides.length) {slideIndex = 1}
           slides[slideIndex-1].style.display = "block";
-            setTimeout(showSlides, 2000); // Change image every 2 seconds
+            setTimeout(showSlides, 2500); // Change image every 2 seconds
     }
   </script>
   </div>
