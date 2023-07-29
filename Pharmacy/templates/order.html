@@ -1,0 +1,346 @@
+
+{% block title %}{% endblock title %}
+
+{% block body %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <div id="navbar">
+        <h4><span>PHARMA</span></h4>
+            <a  class="nav_option" href=""><span>Home</span></a>
+                  <a class="nav_option" href="about/"><span>About</span></a>
+                  <a class="nav_option" href="med_prod/"><span>Our Medicine & Product</span></a>
+                  <a class="nav_option" href="order/"><span>Order</span></a>
+                  <a class="nav_option" href="contact/"><span>Contact Us</span></a>
+              <div class="dropdown">
+                  <button class="dropbtn">New User?</button>
+                    <div class="dropdown-content">
+                        <a href="login/">Login</a>
+                            <a href="Register/">Sign in</a>
+                                </div>
+              </div>
+              <a class="nav_option" href="My_cart/"><span>My Cart</span></a>
+          
+                  <form class="search" action="#">
+                      <input class="search_place" type="text"
+                        placeholder=" Search medicine"
+                          name="search">
+                    <button>Search
+                        <i class="fa fa-search"
+                          style="font-size: 15px;">
+                        </i>
+                    </button>
+                  </form>
+    
+                  <nav class="helpline-nav">
+                    <li class="helpline"><a href="tel:+917583962253">Helpline: +91 7583962253</a></li>
+                </nav>
+    </div>
+    <section id="order-section">
+        <div class="container">
+          <h2 class="section-heading">Order Online</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <form id="order-form">
+                <div class="form-group">
+                  <label for="name-input">Name</label>
+                  <input type="text" class="form-control" id="name-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="email-input">Email address</label>
+                  <input type="email" class="form-control" id="email-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone-input">Phone number</label>
+                  <input type="tel" class="form-control" id="phone-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="medicine-input">Medicine</label>
+                  <select class="form-control" id="medicine-input" required>
+                    <option value="">Select a medicine</option>
+                    <option value="medicine-1">Medicine 1</option>
+                    <option value="medicine-2">Medicine 2</option>
+                    <option value="medicine-3">Medicine 3</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="Payment">Payment Mode</label>
+                  <select>
+                  <option value="">Cash On Delivery</option>
+                  <option value="" href="">Credit Card</option>
+                  <option value="" hrf="">Debit Card</option>
+                  <option value="" href="">Net Banking</option>
+                </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Order Now</button>
+              </form>
+            </div>
+            <div class="col-md-6">
+              <img src="https://via.placeholder.com/500x300" alt="Order Image" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+<script>
+    const form = document.querySelector('#order-form');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const name = document.querySelector('#name-input').value.trim();
+  const email = document.querySelector('#email-input').value.trim();
+  const phone = document.querySelector('#phone-input').value.trim();
+  const medicine = document.querySelector('#medicine-input').value;
+
+  if (!name || !email || !phone || !medicine) {
+    const errorMessage = document.createElement('p');
+    errorMessage.classList.add('error-message');
+    errorMessage.textContent = 'Please fill out all fields.';
+    form.appendChild(errorMessage);
+    return;
+  }
+
+  const successMessage = document.createElement('p');
+  successMessage.classList.add('success-message');
+  successMessage.textContent = 'Your order has been submitted.';
+  form.appendChild(successMessage);
+  form.reset();
+});
+
+</script> 
+
+    <style>
+
+      #order-section {
+        padding: 80px 0;
+        background-color: #f8f9fa;
+      }
+      .container{
+             height:800px;
+             background-color:EA73DF;
+             
+      }
+   
+       body{
+           background-color: aquamarine;
+           height: 5000px;
+           margin: 0;
+           padding: 0;
+         }
+         
+         #navbar{
+           height: 100px;
+           background-color: aqua;
+           margin: 2px solid black;
+           padding: 1px;
+         }
+         
+         .nav_option{
+           font-size: large;
+           font-family: 'Times New Roman', Times, serif;
+           font-weight: lighter;
+           padding: 5px;
+           margin: 4px;
+           padding-top: 10px;
+           padding-bottom: 10px;
+           display: inline;
+           float: left;
+           padding-left: 40px;
+         }
+         
+         .search{
+           margin: 10px;
+           padding-left: 5px;
+           padding-right: 5px;
+           float:right;
+         }
+         
+         .logo{
+         height: 5000px;
+          margin:0%;
+          padding:0%;
+          padding-left: 5%;
+          padding-right: 5%;
+         }
+         
+         .dropbtn {
+         background-color: #4CAF50;
+         color: white;
+         padding: 16px;
+         font-size: 16px;
+         border: none;
+         cursor: pointer;
+         }
+         
+         /* The container <div> - needed to position the dropdown content */
+         .dropdown {
+         position: relative;
+         display: inline-block;
+         }
+         
+         /* Dropdown Content (Hidden by Default) */
+         .dropdown-content {
+         display: none;
+         position: absolute;
+         background-color: #f9f9f9;
+         min-width: 160px;
+         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+         z-index: 1;
+         }
+         
+         /* Links inside the dropdown */
+         .dropdown-content a {
+         color: black;
+         padding: 10px 14px;
+         margin-right: 5px;
+         text-decoration: none;
+         display: block;
+         }
+         
+         /* Change color of dropdown links on hover */
+         .dropdown-content a:hover {background-color: #f1f1f1}
+         
+         /* Show the dropdown menu on hover */
+         .dropdown:hover .dropdown-content {
+         display: block;
+         }
+         
+         /* Change the background color of the dropdown button when the dropdown content is shown */
+         .dropdown:hover .dropbtn {
+         background-color: #3e8e41;
+         }
+         
+         .image{
+         margin: 0;
+         padding: 0;
+         }
+         
+         
+         
+       .product-card {
+           border: 1px solid #ccc;
+           padding:10px;
+           width: 300px;
+           text-align: center;
+           background-color:19DFE8;
+           margin:20px;
+           display:inline-block;
+         }
+         
+         .product-card img {
+           max-width: 100%;
+           height: auto;
+         }
+         
+         .product-card h2 {
+           font-size: 24px;
+           margin: 10px 0;
+         }
+         
+         .product-card p.price {
+           font-size: 18px;
+           font-weight: bold;
+           margin: 0;
+         }
+         
+         .product-card p.description {
+           font-size: 10px;
+           margin: 10px 0;
+         }
+         
+         .product-card button {
+           display: block;
+           margin: 10px auto;
+           padding: 10px;
+           width: 150px;
+           font-size: 18px;
+           border: none;
+           border-radius: 5px;
+           color: #fff;
+           background-color: #007bff;
+           cursor: pointer;
+         }
+         
+         .product-card button:hover {
+           background-color: #0062cc;
+         }
+   
+   
+         .helpline-nav {
+           background-color: #333;
+           height: 40px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 0 20px;
+           float:right;
+         }
+       
+         .helpline-nav ul {
+           margin: 0;
+           padding: 0;
+           list-style: none;
+           display: flex;
+         }
+         
+         .helpline-nav li {
+           margin: 0 10px;
+         }
+         
+         .helpline-nav a {
+           color: #fff;
+           text-decoration: none;
+           font-size: 16px;
+           line-height: 40px;
+         }
+         
+         .helpline {
+           background-color: #f00;
+           padding: 0 10px;
+           border-radius: 5px;
+         }
+
+
+         .section-heading {
+          font-size: 36px;
+          font-weight: bold;
+          margin-bottom: 50px;
+        }
+        
+        .form-group {
+          margin-bottom: 25px;
+        }
+        
+        label {
+          font-weight: bold;
+        }
+        
+        .btn-primary {
+          background-color: #007bff;
+          border-color: #007bff;
+        }
+        
+        .btn-primary:hover {
+          background-color: #0069d9;
+          border-color: #0062cc;
+        }
+        
+        .error-message {
+          color: red;
+        }
+        
+       
+       </style>
+   
+
+
+{% endblock body %}

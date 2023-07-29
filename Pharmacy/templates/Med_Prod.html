@@ -1,0 +1,328 @@
+{% block title%}{% endblock title%}
+
+{% block body%}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<div id="navbar">
+    <h4><span>PHARMA</span></h4>
+        <a  class="nav_option" href=""><span>Home</span></a>
+              <a class="nav_option" href="about/"><span>About</span></a>
+              <a class="nav_option" href="med_prod/"><span>Our Medicine & Product</span></a>
+              <a class="nav_option" href="order/"><span>Order</span></a>
+              <a class="nav_option" href="contact/"><span>Contact Us</span></a>
+          <div class="dropdown">
+              <button class="dropbtn">New User?</button>
+                <div class="dropdown-content">
+                    <a href="login/">Login</a>
+                        <a href="Register/">Sign in</a>
+                            </div>
+          </div>
+          <a class="nav_option" href="My_cart/"><span>My Cart</span></a>
+      
+              <form class="search" action="#">
+                  <input class="search_place" type="text"
+                    placeholder=" Search medicine"
+                      name="search">
+                <button>Search
+                    <i class="fa fa-search"
+                      style="font-size: 15px;">
+                    </i>
+                </button>
+              </form>
+
+              <nav class="helpline-nav">
+                <li class="helpline"><a href="tel:+917583962253">Helpline: +91 7583962253</a></li>
+            </nav>
+</div>
+
+
+
+
+    <div class="container">
+     <h2>Our Product</h2>
+            <!-- Card -->
+            <div class="product-card">
+                {% load static %}
+              <img src="{% static "lifebuoy.jpg" %}" style="width:100%" alt="MY Image 1">
+                <h3>Lifebuoy Total10 Germ Protection Bathing Soap(125g X 7)</h3>
+                <label for="quantity">Quantity</label>
+                   <input type="number" id="quantity" name="quantity" min="1" required>
+                <p class="price">₹270</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod velit.</p>
+                <button class="add-to-cart-btn" href="My_cart/ ">Add to cart</button>
+                <button class="order-now-btn" href="order/">Order now</button>
+              </div>
+             
+            
+              <div class="product-card">
+                {% load static %}
+              <img src="{% static "lifebuoy.jpg" %}" style="width:100%" alt="MY Image 1">
+                <h3>Lifebuoy Total10 Germ Protection Bathing Soap(125g X 7)</h3>
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+                <p class="price">₹270</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod velit.</p>
+                <button class="add-to-cart-btn" href="My_cart/ ">Add to cart</button>
+                <button class="order-now-btn" href="order/">Order now</button>
+              </div>
+            
+
+              <div class="product-card">
+                {% load static %}
+              <img src="{% static "lifebuoy.jpg" %}" style="width:100%" alt="MY Image 1">
+                <h3>Lifebuoy Total10 Germ Protection Bathing Soap(125g X 7)</h3>
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+                <p class="price">₹270</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod velit.</p>
+                <button class="add-to-cart-btn" href="My_cart/ ">Add to cart</button>
+                <button class="order-now-btn" href="order/">Order now</button>
+              </div>
+            
+
+    </div>   
+
+
+
+
+    <div class="container">
+        <h2>Our Medicine</h2>
+               <!-- Card -->
+               <div class="product-card">
+                {% load static %}
+              <img src="{% static "dolo-650mg.jpg" %}" style="width:100%" alt="MY Image 1">
+                <h3>Dolo (Paracetamol) 650mg Strip Of 15 Tablets By MICRO LABS</h3>
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+                <p class="price">₹25.41</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod velit</p>
+                <button class="add-to-cart-btn" href="My_cart/">Add to cart</button>
+                <button class="order-now-btn" href="order/">Order now</button>
+              </div>
+              
+              
+              
+              <div class="product-card">
+                {% load static %}
+              <img src="{% static "dolo-650mg.jpg" %}" style="width:100%" alt="MY Image 1">
+                <h3>Dolo (Paracetamol) 650mg Strip Of 15 Tablets By MICRO LABS</h3>
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+                <p class="price">₹25.41</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod velit</p>
+                <button class="add-to-cart-btn" href="My_cart/">Add to cart</button>
+                <button class="order-now-btn" href="order/">Order now</button>
+              </div>
+
+              <div class="product-card">
+                {% load static %}
+              <img src="{% static "dolo-650mg.jpg" %}" style="width:100%" alt="MY Image 1">
+                <h3>Dolo (Paracetamol) 650mg Strip Of 15 Tablets By MICRO LABS</h3>
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+                <p class="price">₹25.41</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod velit</p>
+                <button class="add-to-cart-btn" href="My_cart/">Add to cart</button>
+                <button class="order-now-btn" href="order/">Order now</button>
+              </div>
+       </div>   
+   
+   
+
+
+<style>
+   .container{
+          height:1000px;
+          background-color:EA73DF;
+          
+   }
+
+    body{
+        background-color: aquamarine;
+        height: 5000px;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #navbar{
+        height: 100px;
+        background-color: aqua;
+        margin: 2px solid black;
+        padding: 1px;
+      }
+      
+      .nav_option{
+        font-size: large;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: lighter;
+        padding: 5px;
+        margin: 4px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: inline;
+        float: left;
+        padding-left: 40px;
+      }
+      
+      .search{
+        margin: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        float:right;
+      }
+      
+      .logo{
+      height: 5000px;
+       margin:0%;
+       padding:0%;
+       padding-left: 5%;
+       padding-right: 5%;
+      }
+      
+      .dropbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      }
+      
+      /* The container <div> - needed to position the dropdown content */
+      .dropdown {
+      position: relative;
+      display: inline-block;
+      }
+      
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      }
+      
+      /* Links inside the dropdown */
+      .dropdown-content a {
+      color: black;
+      padding: 10px 14px;
+      margin-right: 5px;
+      text-decoration: none;
+      display: block;
+      }
+      
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {background-color: #f1f1f1}
+      
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+      display: block;
+      }
+      
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+      .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+      }
+      
+      .image{
+      margin: 0;
+      padding: 0;
+      }
+      
+      
+      
+    .product-card {
+        border: 1px solid #ccc;
+        padding:10px;
+        width: 300px;
+        text-align: center;
+        background-color:19DFE8;
+        margin:20px;
+        display:inline-block;
+      }
+      
+      .product-card img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .product-card h2 {
+        font-size: 24px;
+        margin: 10px 0;
+      }
+      
+      .product-card p.price {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+      }
+      
+      .product-card p.description {
+        font-size: 10px;
+        margin: 10px 0;
+      }
+      
+      .product-card button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        width: 150px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #007bff;
+        cursor: pointer;
+      }
+      
+      .product-card button:hover {
+        background-color: #0062cc;
+      }
+
+
+      .helpline-nav {
+        background-color: #333;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        float:right;
+      }
+    
+      .helpline-nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+      }
+      
+      .helpline-nav li {
+        margin: 0 10px;
+      }
+      
+      .helpline-nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 40px;
+      }
+      
+      .helpline {
+        background-color: #f00;
+        padding: 0 10px;
+        border-radius: 5px;
+      }
+    
+    </style>
+    
+    
+    
+{% endblock body%}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<style>
+body{
+  background-color: aquamarine;
+  height: 1000px;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar{
+  height: 100px;
+  background-color: aqua;
+  margin: 2px solid black;
+  padding: 1px;
+}
+
+.nav_option{
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: lighter;
+  padding: 5px;
+  margin: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline;
+  float: left;
+  padding-left: 40px;
+}
+
+.search{
+  margin: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  float:right;
+}
+
+.logo{
+height: 5000px;
+ margin:0%;
+ padding:0%;
+ padding-left: 5%;
+ padding-right: 5%;
+}
+
+.dropbtn {
+background-color: #4CAF50;
+color: white;
+padding: 16px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+color: black;
+padding: 10px 14px;
+margin-right: 5px;
+text-decoration: none;
+display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+background-color: #3e8e41;
+}
+
+.image{
+margin: 0;
+padding: 0;
+}
+
+
+
+.carousel slide{
+  height: 500px;
+  }
+  
+  
+  
+  
+  /* Slideshow container */
+  .slideshow-container {
+  box-sizing:border-box;
+  height : 500px;
+  position: relative;
+  margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+  display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+  background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+  }
+  
+  h4{
+      display: inline;
+      color:black;
+      font-size: 20px;
+      margin-left: 1px;
+      float: left;
+  }
+
+  .helpline-nav {
+    background-color: #333;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    float:right;
+  }
+
+  .helpline-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  
+  .helpline-nav li {
+    margin: 0 10px;
+  }
+  
+  .helpline-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 40px;
+  }
+  
+  .helpline {
+    background-color: #f00;
+    padding: 0 10px;
+    border-radius: 5px;
+  }
+
+
+</style>
+<body>
+      <div id="navbar">
+            <h4><span>PHARMA</span></h4>
+                <a  class="nav_option" href=""><span>Home</span></a>
+                      <a class="nav_option" href="about/"><span>About</span></a>
+                      <a class="nav_option" href="med_prod/"><span>Our Medicine & Product</span></a>
+                      <a class="nav_option" href="order/"><span>Order</span></a>
+                      <a class="nav_option" href="contact"><span>Contact Us</span></a>
+                  <div class="dropdown">
+                      <button class="dropbtn">New User?</button>
+                        <div class="dropdown-content">
+                            <a href="login/">Login</a>
+                                <a href="Register/">Sign in</a>
+                                    </div>
+                  </div>
+                  <a class="nav_option" href="My_cart/"><span>My Cart</span></a>
+              
+                      <form class="search" action="#">
+                          <input class="search_place" type="text"
+                            placeholder=" Search medicine"
+                              name="search">
+                        <button>Search
+                            <i class="fa fa-search"
+                              style="font-size: 15px;">
+                            </i>
+                        </button>
+                      </form>
+
+                      <nav class="helpline-nav">
+                        <li class="helpline"><a href="tel:+917583962253">Helpline: +91 7583962253</a></li>
+                    </nav>
+    </div>
+    
+
+        
+
+
+
+    <div class="carousel slide">
+
+        
+      <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          {% load static %}
+              <img src="{% static "Pharmacy.png" %}" style="width:100%" alt="MY Image 1">
+          <div class="text"><h4>Pharma is one of India's most trusted online pharmacy & medical stores offering pharmaceutical and healthcare products at a FLAT 20% OFF*.Trusted by Thousands of Customers - Show that the company has a strong reputation and has earned the trust of thousands of satisfied customers</h4></div>
+      </div>
+    
+      <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            {% load static %}
+            <img src="{% static "img3.jpg" %}" style="width:100%" alt="My Image 2">
+              <div class="text"><h4>Medicine is the science and practice of caring for a patient, managing the diagnosis, prognosis, prevention, treatment, palliation of their injury or disease, and promoting their health</h4></div>
+      </div>
+    
+    
+      <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            {% load static %}
+            <img src="{% static "img4.jpg" %}" style="width:100%" alt="My Image 3">
+              <div class="text"><h4> Here You Get Soap,Medicated Shampoo,Sanitizer,Mask</h4></div>
+      </div>
+    
+      
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+       <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+    <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+        }
+          slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+          slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+  </div>
+    
+    <div class="social">
+    <div class="row">
+    <div class="col-lg-3 mb-3">
+    <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap">
+    
+    <span class="fs-5">PHARMA</span>
+    </a>
+    <ul class="list-unstyled small text-muted">
+    <li class="mb-2">Designed and built with all the love in the world by the <a href="/docs/5.0/about/team/">Bootstrap team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</li>
+    <li class="mb-2">Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
+    <li class="mb-2">Currently v5.0.2.</li>
+    <li class="mb-2">Analytics by <a href="https://usefathom.com/ref/ADZSBE" target="_blank" rel="noopener">Fathom</a>.</li>
+    <li><p>&copy; 2023 Pharma All Rights Reserved.</p></li>
+    <li><p>&copy; TEAM MEDI All Rights Reserved.</p></li>
+    </ul>
+    </div>
+    <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+    <h5>Links</h5>
+    <ul class="list-unstyled">
+    <li class="mb-2"><a href="/">Home</a></li>
+    <li class="mb-2"><a href="/docs/5.0/">Docs</a></li>
+    <li class="mb-2"><a href="/docs/5.0/examples/">Examples</a></li>
+    <li class="mb-2"><a href="https://themes.getbootstrap.com/">Themes</a></li>
+    <li class="mb-2"><a href="https://blog.getbootstrap.com/">Blog</a></li>
+    <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap">Swag Store</a></li>
+    </ul>
+    </div>
+    <div class="col-6 col-lg-2 mb-3">
+    <h5>Guides</h5>
+    <ul class="list-unstyled">
+    <li class="mb-2"><a href="/docs/5.0/getting-started/">Getting started</a></li>
+    <li class="mb-2"><a href="/docs/5.0/examples/starter-template/">Starter template</a></li>
+    <li class="mb-2"><a href="/docs/5.0/getting-started/webpack/">Webpack</a></li>
+    <li class="mb-2"><a href="/docs/5.0/getting-started/parcel/">Parcel</a></li>
+    </ul>
+    </div>
+    <div class="col-6 col-lg-2 mb-3">
+    <h5>Projects</h5>
+    <ul class="list-unstyled">
+    <li class="mb-2"><a href="https://github.com/twbs/bootstrap">Bootstrap 5</a></li>
+    <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
+    <li class="mb-2"><a href="https://github.com/twbs/icons">Icons</a></li>
+    <li class="mb-2"><a href="https://github.com/twbs/rfs">RFS</a></li>
+    <li class="mb-2"><a href="https://github.com/twbs/bootstrap-npm-starter">npm starter</a></li>
+    </ul>
+    </div>
+    <div class="col-6 col-lg-2 mb-3">
+    <h5>Community</h5>
+    <ul class="list-unstyled">
+    <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
+    <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions">Discussions</a></li>
+    <li class="mb-2"><a href="https://github.com/sponsors/twbs">Corporate sponsors</a></li>
+    <li class="mb-2"><a href="https://opencollective.com/bootstrap">Open Collective</a></li>
+    <li class="mb-2"><a href="https://bootstrap-slack.herokuapp.com/">Slack</a></li>
+    <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+
+
+</body>
+</html>
