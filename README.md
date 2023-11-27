@@ -10,9 +10,9 @@ A pharmacy management system is a comprehensive software solution that optimizes
 ![image](https://github.com/Abhijnan29/Pharmacy_Management_System/assets/95416360/596f614c-296b-49b7-b51a-aa4ddef1013b)
 
 
-#Team Name: Tech Medi
+# Team Name: Tech Medi
 
-Members :
+# Members :
 Soumen Manna 4th Year B.Tech  https://github.com/soumenprogramming
 Anita Singha 4th Year B.Tech  https://github.com/AnitaSingha1234
 Anindita Singha 4th Year B.Tech https://github.com/anindita2805
